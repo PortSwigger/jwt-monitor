@@ -1,16 +1,47 @@
-<p>This Burp Suite extension, JWT Monitor, keeps track of a given JWT tokens expiration and substitutes any existing JWT token in outgoing requests with the given one. If autopilot mode is enabled, the extension automatically halts task execution if the JWT token is set to expire in the next minute. Task execution will resume automatically when a new JWT token with at least three minutes of validity remaining is provided.</p>
+<p>This extension monitors a provided JWT token for expiration and
+  automatically replaces any existing JWT tokens in outgoing requests
+  with the monitored one. It also includes an autopilot mode that
+  intelligently pauses task execution when the JWT token is about to
+  expire and resumes automatically when a new token with sufficient
+  validity is provided.</p>
 
 <h2>Features</h2>
 
 <ul>
-  <li>Monitors a provided JWT token for expiration.</li>
-  <li>Replaces any existing JWT token in outgoing requests with the monitored one.</li>
-  <li>Autopilot mode which pauses task execution when the token is about to expire.</li>
-  <li>Task execution automatically resumes when a new JWT token with sufficient validity is supplied.</li>
-</ul> 
+  <li>Monitors JWT token expiration with real-time countdown
+    display</li>
+  <li>Automatically replaces existing JWT tokens in Authorization
+    headers and cookies</li>
+  <li>Autopilot mode that pauses task execution when token expires
+    within one minute</li>
+  <li>Automatic task resumption when new JWT token with at least three
+    minutes validity is supplied</li>
+  <li>Visual expiration warnings with color-coded status
+    indicators</li>
+  <li>Displays decoded JWT header, payload, and signature in formatted
+    JSON</li>
+  <li>Comprehensive logging of token replacements and task control
+    actions</li>
+</ul>
 
 <h2>Usage</h2>
 
-<p>Once the extension is loaded, supply it with a JWT token. The extension will then monitor this token for its expiry. If another token is included in outgoing requests, it will replace it with the provided one.</p>
+<ol>
+  <li>Navigate to the JWT Monitor tab in the extension interface</li>
+  <li>Paste your JWT token into the token input field</li>
+  <li>Click the Apply button to start monitoring the token</li>
+  <li>The extension will display the token's expiration countdown and
+    decoded components</li>
+  <li>All outgoing requests will automatically have their JWT tokens
+    replaced with your monitored token</li>
+  <li>To enable autopilot mode, click the Autopilot toggle button</li>
+  <li>When autopilot is enabled, task execution will pause when the
+    token has less than one minute remaining and resume automatically when
+    a new token with at least three minutes validity is provided</li>
+  <li>Monitor the log area for real-time updates on token replacements
+    and task control actions</li>
+</ol>
 
-<p>To use the autopilot feature, activate it in the extension settings. If the monitored token will expire within the next minute, task execution will pause. Task execution will resume automatically when a new JWT token with at least three minutes of validity is supplied.</p>
+<p>The extension supports JWT tokens in both Authorization headers
+  (<code class="InlineCode">Bearer</code> format) and cookies,
+  automatically detecting and replacing tokens that begin with <code class="InlineCode">eyJ</code>.</p>
