@@ -1,0 +1,16 @@
+<p>This Burp Suite extension, JWT Monitor, keeps track of a given JWT tokens expiration and substitutes any existing JWT token in outgoing requests with the given one. If autopilot mode is enabled, the extension automatically halts task execution if the JWT token is set to expire in the next minute. Task execution will resume automatically when a new JWT token with at least three minutes of validity remaining is provided.</p>
+
+<h2>Features</h2>
+
+<ul>
+  <li>Monitors a provided JWT token for expiration.</li>
+  <li>Replaces any existing JWT token in outgoing requests with the monitored one.</li>
+  <li>Autopilot mode which pauses task execution when the token is about to expire.</li>
+  <li>Task execution automatically resumes when a new JWT token with sufficient validity is supplied.</li>
+</ul> 
+
+<h2>Usage</h2>
+
+<p>Once the extension is loaded, supply it with a JWT token. The extension will then monitor this token for its expiry. If another token is included in outgoing requests, it will replace it with the provided one.</p>
+
+<p>To use the autopilot feature, activate it in the extension settings. If the monitored token will expire within the next minute, task execution will pause. Task execution will resume automatically when a new JWT token with at least three minutes of validity is supplied.</p>
