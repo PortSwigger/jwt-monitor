@@ -2,12 +2,12 @@ Uuid: 0f647199e97247b68a0e2248a8346c7d
 ExtensionType: 1
 Name: JWT Monitor
 RepoName: jwt-monitor
-ScreenVersion: 1.1.0
-SerialVersion: 3
-MinPlatformVersion: 17
+ScreenVersion: 1.1.1
+SerialVersion: 4
+MinPlatformVersion: 4
 ProOnly: False
 Author: Redguard
 ShortDescription: Monitors a provided JWT token's expiration, replaces any outgoing requests' JWT tokens with the provided one, and pauses tasks if the token is about to expire.
-EntryPoint: JWTMonitor-1.1.0.jar
+EntryPoint: JWTMonitor-1.1.1.jar
 BuildCommand: ./gradlew build test
 SupportedProducts: Pro, Community
