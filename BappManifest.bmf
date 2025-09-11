@@ -9,5 +9,5 @@ ProOnly: False
 Author: Redguard
 ShortDescription: Monitors a provided JWT token's expiration, replaces any outgoing requests' JWT tokens with the provided one, and pauses tasks if the token is about to expire.
 EntryPoint: JWTMonitor-1.1.1.jar
-BuildCommand: ./gradlew build test
+BuildCommand: ./gradlew shadowJar
 SupportedProducts: Pro, Community
