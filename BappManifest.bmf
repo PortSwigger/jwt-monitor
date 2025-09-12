@@ -3,7 +3,7 @@ ExtensionType: 1
 Name: JWT Monitor
 RepoName: jwt-monitor
 ScreenVersion: 1.1.1
-SerialVersion: 8
+SerialVersion: 9
 MinPlatformVersion: 17
 ProOnly: False
 Author: Partick Schmid (Redguard AG)
