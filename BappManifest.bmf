@@ -6,7 +6,7 @@ ScreenVersion: 1.1.1
 SerialVersion: 9
 MinPlatformVersion: 17
 ProOnly: False
-Author: Partick Schmid (Redguard AG)
+Author: Patrick Schmid (Redguard AG)
 ShortDescription: Monitors a provided JWT token's expiration, replaces any outgoing requests' JWT tokens with the provided one, and pauses tasks if the token is about to expire.
 EntryPoint: JWTMonitor-1.1.1-all.jar
 BuildCommand: ./gradlew shadowJar
